@@ -3,156 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pink & Orange Demo</title>
+  <title>TiltFlyer - Official Game Homepage</title>
   <style>
-    /* === CSS Styles (Same as previous) === */
-    body {
+    * {
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff0f5;
-      color: #ff1493;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #00bcd4, #e91e63);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.3);
       padding: 20px;
+      text-align: center;
     }
 
-    h1, h2, h3 {
-      color: #ff6f61;
-      margin-bottom: 10px;
+    header h1 {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 2px 2px #333;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      border-bottom: 3px solid #ff1493;
-      padding-bottom: 5px;
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
     h2 {
-      font-size: 2rem;
-      border-left: 5px solid #ff1493;
-      padding-left: 10px;
+      color: #00ffcc;
+      margin-bottom: 10px;
     }
 
-    h3 {
-      font-size: 1.5rem;
-      color: #ff69b4;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #d63384;
-      margin-bottom: 15px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background: #ffe4e1;
-      color: #c71585;
-    }
-
-    table, th, td {
-      border: 1px solid #ff69b4;
-    }
-
-    th {
-      background-color: #ffb6c1;
-      color: #d63384;
+    .faq details {
+      margin-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 10px;
-      text-align: left;
-    }
-
-    td {
-      padding: 10px;
-    }
-
-    form {
-      background: #fffaf0;
-      border: 2px solid #ff69b4;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 2px solid #ff69b4;
       border-radius: 5px;
-      background-color: #fff0f5;
-      color: #c71585;
-      font-size: 1rem;
     }
 
-    input[type="submit"],
-    button {
-      background-color: #ff6f61;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-weight: bold;
-      border-radius: 5px;
+    .faq summary {
       cursor: pointer;
-      transition: background 0.3s ease;
+      font-weight: bold;
     }
 
-    input[type="submit"]:hover,
-    button:hover {
-      background-color: #ff1493;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .team {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .team-member {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .colors {
+      color: #b2ff59;
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to the Pink & Orange World</h1>
-  <p>This is a demo page to showcase a colorful CSS theme using pink and orange shades.</p>
+  <header>
+    <h1>TiltFlyer</h1>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#how-to-play">How to Play</a>
+      <a href="#faq">FAQ</a>
+      <a href="#team">Our Team</a>
+    </nav>
+  </header>
 
-  <h2>Section Title</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ornare velit. Aliquam erat volutpat.</p>
+  <section id="overview">
+    <h2>Project Overview</h2>
+    <div class="info-box">
+      <p><strong class="colors">TiltFlyer</strong> is a 2D arcade iOS game where players control a flying object through gaps in pillars using tilt controls. Featuring <strong>haptics</strong>, <strong>Game Center</strong> leaderboards, and colorful customizable visuals, it's a fast-paced and immersive mobile experience.</p>
+    </div>
 
-  <h3>Subsection</h3>
-  <p>Here’s a smaller heading with a hot pink accent. The paragraphs look like this, with readable spacing and color.</p>
+    <h3>Technologies Used</h3>
+    <ul>
+      <li>SpriteKit – Physics Engine</li>
+      <li>Core Motion – Tilt-based Controls</li>
+      <li>Core Haptics – Vibration Feedback</li>
+      <li>GameKit – Leaderboards and Achievements</li>
+      <li>WebKit – Help Page Webview</li>
+      <li>SQLite – Player Data and Stats</li>
+    </ul>
+  </section>
 
-  <h2>Sample Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Jane Doe</td>
-        <td>jane@example.com</td>
-        <td>Active</td>
-      </tr>
-      <tr>
-        <td>John Smith</td>
-        <td>john@example.com</td>
-        <td>Pending</td>
-      </tr>
-    </tbody>
-  </table>
+  <section id="how-to-play">
+    <h2>How to Play</h2>
+    <div class="info-box">
+      <ul>
+        <li>🕹️ <strong>Tilt</strong> your phone up and down to control the flying object.</li>
+        <li>🧱 Fly through the gaps between pillars to score points.</li>
+        <li>🎯 Each successful pass adds to your score.</li>
+        <li>📱 Feel vibrations on collision or successful passes thanks to haptic feedback.</li>
+        <li>🎨 Customize your plane and background using earned in-game currency.</li>
+        <li>🏆 Check Game Center for your score against the world!</li>
+      </ul>
+    </div>
+  </section>
 
-  <h2>Contact Form</h2>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your full name" />
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>What devices support TiltFlyer?</summary>
+        <p>Any iOS device running iOS 15 or higher.</p>
+      </details>
+      <details>
+        <summary>How do I unlock new flying objects?</summary>
+        <p>Earn in-game currency by playing and use it to buy custom objects in the customization menu.</p>
+      </details>
+      <details>
+        <summary>Does TiltFlyer require internet?</summary>
+        <p>Internet is only needed for Game Center leaderboard access and help page viewing.</p>
+      </details>
+      <details>
+        <summary>Can I turn off the haptic feedback?</summary>
+        <p>Yes, you can adjust haptics and sound in the settings screen.</p>
+      </details>
+      <details>
+        <summary>Is there a pause option during gameplay?</summary>
+        <p>Yes! Just tap the screen with two fingers to pause the game and bring up the pause menu.</p>
+      </details>
+    </div>
+  </section>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" />
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <h3>Dylan Dobbs</h3>
+        <p>Gameplay, Physics, Point System</p>
+      </div>
+      <div class="team-member">
+        <h3>Matthew Donaghey</h3>
+        <p>Motion Controls, Game Session, WebView</p>
+      </div>
+      <div class="team-member">
+        <h3>Teagan Cheung</h3>
+        <p>Haptics, Sound, Customization</p>
+      </div>
+      <div class="team-member">
+        <h3>William Lokaisingh</h3>
+        <p>Database and Leaderboards</p>
+      </div>
+    </div>
+  </section>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" placeholder="Type your message..."></textarea>
-
-    <input type="submit" value="Send Message" />
-  </form>
+  <footer>
+    <p>&copy; 2025 TiltFlyer – A Sheridan College Project</p>
+  </footer>
 
 </body>
 </html>
